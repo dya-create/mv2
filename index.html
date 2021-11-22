@@ -34,6 +34,10 @@
                     <input id="emailID" type="text" value="" size="20"placeholder="Email">
                     <br>
 
+                    <label>Zip Code</label>
+                    <input id="zipID" type="text" value="" size="20" onfocus="getPlace()" onblur="getPlace()"placeholder="Zip">
+                    <br>
+
                     <label>City</label>
                     <input id="cityID" type="text" value="" size="20"placeholder="City">
                     <br>
@@ -42,8 +46,7 @@
                     <input id="stateID" type="text" value="" size="20" onkeypress="keyPressed()"placeholder="State">
                     <br>
 
-                    <label>Zip Code</label>
-                    <input id="zipID" type="text" value="" size="20" onfocus="getPlace()" onblur="getPlace()"placeholder="Zip">
+                    
 
                    <br> <br>
                    <button type="button" onclick="newContact()">New</button>   
