@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<!--
+    Author:  Diya
+    Class:   Web & Distributed Programming 
+    Project: Mustang version 2
+    Reference: I have reffered to and used some fucntions from Mustang list V2
+   
+-->
+    <head>
+        <meta charset="UTF-8">
+        <title>Mustang Two</title>
+        <link rel="stylesheet" href="index.css">
+        <script src= "main.js"></script>
+        
+
+    </head>
+    <body onload="initApplication()">
+        <form autocomplete="off" onclick="autoShow()">
+            <div class="autocomplete">
+                <input id="myInput" type="search" placeholder="Contact Search" ><br><br>
+            </div>
+        </form>
+      
+        <h1>Mustang version 2</h1>
+        
+            <table>
+                    
+                    <label>Name</label>
+                    <input id="nameID" type="text" value="" size="20" placeholder="Name">
+                    <br>
+
+                    <label>Email</label>
+                    <input id="emailID" type="text" value="" size="20"placeholder="Email">
+                    <br>
+
+                    <label>City</label>
+                    <input id="cityID" type="text" value="" size="20"placeholder="City">
+                    <br>
+
+                    <label>State</label>
+                    <input id="stateID" type="text" value="" size="20" onkeypress="keyPressed()"placeholder="State">
+                    <br>
+
+                    <label>Zip Code</label>
+                    <input id="zipID" type="text" value="" size="20" onfocus="add()" onblur="add()"placeholder="Zip">
+
+                   <br> <br>
+
+                    <button type="button" autofocus onclick="next()">Next</button>
+                    <button type="button" onclick="previous()">Previous</button>
+                    <button type="button" onclick="insertNewContact()">Add New Contact</button>
+
+                    <button type="button" onclick="deleting()">Delete</button>
+                    <p id="statusID"></p>
+                </div>
+              
+            </table>
+            <p id=add></p>
+      
+       List of Contacts:<pre id="contactsID"></pre>
+        
+    </body>
+</html>
