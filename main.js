@@ -4,6 +4,12 @@ var currentContactIndex = 0;
 var contactURLArray = [];
 var contactArray = [];
 
+//starting of the application
+function initApplication() {
+    console.log("Mustang Version 2 Starting")
+    loadIndex();
+}
+
 // viewing current contact on input fieldd
 function viewCurrentContact(){
     currentContact = contactArray[currentContactIndex];
@@ -77,7 +83,7 @@ function add() {
     var zip = document.getElementById("zipID").value
     console.log("zip:"+zip);
 
-    console.log("function getPlace(zip) { ... }");
+    console.log("getPlace(zip)");
     var xhr = new XMLHttpRequest();
 
     // Register the embedded handler function
@@ -110,10 +116,10 @@ async function loadIndex() {
         contactURLArray.push(contactIndexJ[i].ContactURL);
     }
    
-    contacts();
+    loadContacts();
 }
 
-function contacts(){
+function loadContacts(){
     contactArray.length = 0;
     loadingContact = 0;
 
@@ -127,11 +133,7 @@ function logContacts() {
     console.log(contactArray);
 }
 
-//starting of the application
-function initApplication() {
-    console.log("Mustang Version 2 Starting")
-    loadIndex();
-}
+
 
 //taken and modified from my mustang version 1 for autocomplete by firstName
 
@@ -260,7 +262,7 @@ function autocomplete(inp, arr) {
     });
   }
 
-// show other fields by auto completing
+// show other fields by auto complete
 function autoShow(){
 
     var inputSearch = document.getElementById("myInput").value;
@@ -278,4 +280,8 @@ function autoShow(){
     }
     
     }
+
+
+
+
 
