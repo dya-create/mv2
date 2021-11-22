@@ -7,7 +7,7 @@ var contactArray = [];
 //starting of the application
 function initApplication() {
     console.log("Mustang Version 2 Starting")
-    loadIndex();
+    //loadIndex();
 }
 
 // viewing current contact on input fieldd
@@ -41,6 +41,15 @@ function next(){
     currentContact = contactArray[currentContactIndex];
     viewCurrentContact(); //calling view currentcontact 
 
+}
+
+function newContact() {
+    console.log('new()');
+    document.getElementById("nameID").value = "";   
+    document.getElementById("emailID").value = "";   
+    document.getElementById("cityID").value = "";   
+    document.getElementById("stateID").value = "";
+    document.getElementById("zipID").value = ""; 
 }
 
 // this fucntion creates a new contact and push it to contact array
@@ -77,22 +86,24 @@ function deleting(){
     }
    
 }
+function zipBlurFunction() {
+    getPlace();
+}
 
 // from mustang lite v2
-function add() {
+function getPlace() {
     var zip = document.getElementById("zipID").value
     console.log("zip:"+zip);
 
-    console.log("getPlace(zip)");
+    console.log("function getPlace(zip) { ... }");
     var xhr = new XMLHttpRequest();
 
-    // Register the embedded handler function
     xhr.onreadystatechange = function() {
         if (xhr.readyState == 4 && xhr.status == 200) {
             var result = xhr.responseText;
             console.log("result:"+result);
             var place = result.split(', ');
-            if ((document.getElementById("cityID").value == "") || (document.getElementById("cityID").value == " "))
+            if (document.getElementById("cityID").value == "" || document.getElementById("cityID").value == " ")
                 document.getElementById("cityID").value = place[0];
             if (document.getElementById("stateID").value == "")
                 document.getElementById("stateID").value = place[1];
@@ -280,6 +291,10 @@ function autoShow(){
     }
     
     }
+
+
+
+
 
 
 
