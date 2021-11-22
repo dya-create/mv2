@@ -43,9 +43,10 @@
                     <br>
 
                     <label>Zip Code</label>
-                    <input id="zipID" type="text" value="" size="20" onfocus="add()" onblur="add()"placeholder="Zip">
+                    <input id="zipID" type="text" value="" size="20" onfocus="getPlace()" onblur="getPlace()"placeholder="Zip">
 
                    <br> <br>
+                   <button type="button" onclick="newContact()">New</button>   
 
                     <button type="button" autofocus onclick="next()">Next</button>
                     <button type="button" onclick="previous()">Previous</button>
