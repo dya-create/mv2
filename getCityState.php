@@ -7,7 +7,7 @@
     "60103" => "Bartlett, IL",
     "60104" => "Bellwood, IL",
     "60105" => "Bensenville, IL",
-    "60106" => "Ericville, IL",
+    "60106" => "Bensenville, IL",
     "60107" => "Streamwood, IL",
     "60108" => "Bloomingdale, IL",
     "60109" => "Burlington, IL",
