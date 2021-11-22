@@ -260,15 +260,15 @@ function autocomplete(inp, arr) {
     });
   }
 
-// calling viewCurrentContact to show fields by auto complete
+// show other fields by auto completing
 function autoShow(){
 
-    var contactLookedUp = document.getElementById("myInput").value;
-    var k = 0;
+    var inputSearch = document.getElementById("myInput").value;
     for(var i = 0; i<contactArray.length;i++){
       
-        if(contactArray[i].firstName == contactLookedUp){
-            var k = 1;
+        //chcking if inputsearch (name) is equal to firstname 
+        if(contactArray[i].firstName == inputSearch){
+            
             document.getElementById("nameID").value = contactArray[i].firstName
             document.getElementById("emailID").value = contactArray[i].email;   
             document.getElementById("cityID").value = contactArray[i].city;   
@@ -276,15 +276,6 @@ function autoShow(){
             document.getElementById("zipID").value = contactArray[i].zip;  
         }
     }
-    if(k==0){
-        console.log()
+    
     }
-
-}
-
-
-
-
-
-
 
